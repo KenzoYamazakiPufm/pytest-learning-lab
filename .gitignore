@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# pytest 缓存
+.pytest_cache/
+
+# 覆盖率数据
+.coverage
+
+# 报告（生成物）
+report.html
+assets/
+allure-results/
+allure-report/
+
+# 测试截图
+shot.png
+full.png
+sel_shot.png
+sel_full.png
+
+# 本地 AI 记忆
+.codebuddy/
