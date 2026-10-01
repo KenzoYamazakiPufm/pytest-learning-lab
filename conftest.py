@@ -2,7 +2,6 @@ import pytest
 import allure
 from etl import output
 from api_client import ApiClient
-from playwright.sync_api import sync_playwright
 
 @pytest.hookimpl(wrapper=True)
 def pytest_runtest_makereport(item, call):
@@ -12,6 +11,7 @@ def pytest_runtest_makereport(item, call):
 
 @pytest.fixture(scope="session")
 def browser():
+    from playwright.sync_api import sync_playwright
     with sync_playwright() as p:
         b = p.chromium.launch(channel="chrome", headless=True)
         yield b
@@ -42,10 +42,10 @@ def api():
     c.login("ken")
     return c
 
-from selenium import webdriver
 
 @pytest.fixture(scope="session")
 def driver():
+    from selenium import webdriver
     d = webdriver.Chrome()
     yield d
     d.quit()

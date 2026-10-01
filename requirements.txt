@@ -1,3 +1,4 @@
 pytest
 requests
 pytest-cov
+allure-pytest
