@@ -1,6 +1,8 @@
 import pytest
 import requests
 
+pytestmark = pytest.mark.api
+
 def test_client_sends_right_url(monkeypatch):
     capture = {}
 

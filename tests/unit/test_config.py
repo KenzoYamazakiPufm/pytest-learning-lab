@@ -1,4 +1,7 @@
 import config
+import pytest
+
+pytestmark = pytest.mark.unit
 
 def test_with_key(monkeypatch):
     monkeypatch.setenv("API_KEY", "fake-key")

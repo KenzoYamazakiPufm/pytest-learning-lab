@@ -1,5 +1,7 @@
 import pytest
 
+pytestmark = pytest.mark.unit
+
 def test_amount(rows):
     for r in rows:
         assert r["amount"] == r["price"] * r["qty"]

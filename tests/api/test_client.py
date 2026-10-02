@@ -1,3 +1,7 @@
+import pytest
+
+pytestmark = pytest.mark.api
+
 def test_get(api):
     r = api.get("/get")
     assert r.status_code == 200

@@ -1,6 +1,8 @@
 import pytest
 import requests
 
+pytestmark = pytest.mark.api
+
 @pytest.fixture(scope="module")
 def resp():
     return requests.get("https://httpbin.org/get", timeout=10)

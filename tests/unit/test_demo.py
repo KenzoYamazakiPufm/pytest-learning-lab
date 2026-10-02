@@ -1,5 +1,7 @@
 import pytest
 
+pytestmark = pytest.mark.unit
+
 # @pytest.mark.xfail(reason="已知bug")
 def test_add():
     assert 1 + 1 == 2
